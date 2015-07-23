@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Theory Maker </title>
+  </head>
+  <body onload="createPage();">
+    <h1> Cool Theory Tool </h1>
+
+    <div id="formZone">
+      <form>
+
+        <h3> <strong>Interp</strong>: </h3>
+        <select id="interp">
+          <option value="manual" selected>*MANUAL*</option>
+        </select> <br> <br>  
+
+       <input type="text" name="manualinterp" />
+
+        <h3> <strong>Violation</strong>: </h3>  
+        <input type="text" name="violation" />
+
+        <h3> <strong>Standards</strong>: </h3>
+        <ol id="standardList">
+          
+        </ol>
+        
+       <h3> <strong>Voter</strong>: </h3>
+        <select onchange = "voterChange(this.selected);">
+          <option value="fairness">fairness</option>
+          <option value="education">education</option>
+          <option value="both" selected>both</option>
+        </select> <br> <br> 
+        <div class= "invisible
+" id="outweighZone">
+        <label of="outweighs">Outweighs?</label>
+        <input type="checkbox" name="outweighs"><br> <br>
+        </div>
+
+      <h3> <strong>Underview</strong>: </h3>
+        <div id="underviewZone"></div>
+        <br>
+        <input type="submit" value="Create!">
+      </form>
+    </div> <!-- form div -->
+    
+    <div id="shell">
+    </div>
+
+  </body>
+</html>
